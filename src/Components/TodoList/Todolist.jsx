@@ -87,7 +87,6 @@ function TodoList() {
   };
 
   //////////////////////////////////////////////////// RENDER //////////////////////////////////////////////////////
-
   return (
     <div className="todo-context">
       <h1>Voici les tâches que j'ai à faire aujourd'hui</h1>

@@ -17,8 +17,6 @@ function TodoInput(props) {
       text: input,
     });
 
-    console.log(input);
-
     setInput("");
   };
 
