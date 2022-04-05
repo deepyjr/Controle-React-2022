@@ -10,7 +10,8 @@ function TodoList() {
     id: null,
     value: "",
   });
-
+  let [translate, setTranslate] = useState(0);
+  let [shouldTransition, setShouldTransition] = useState(true);
   //////////////////////////////////////////////////// HOOKS //////////////////////////////////////////////////////
 
   // Load data from localstorage into todoList
@@ -26,6 +27,7 @@ function TodoList() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
 
+
   //////////////////////////////////////////////////// FUNCTIONS //////////////////////////////////////////////////////
 
   /*
@@ -39,6 +41,8 @@ function TodoList() {
     }
     const newTodos = [todo, ...todos];
     setTodos(newTodos);
+        setShouldTransition(false);
+    setTranslate(0);
   };
 
   /*
@@ -92,7 +96,11 @@ function TodoList() {
     <div className="todo-context">
       <h1>Voici les tâches que j'ai à faire aujourd'hui</h1>
       <TodoInput onSubmit={addTodo} />
-      <div className="container-todo">
+      <div className="container-todo" 
+      style={{
+          transition: shouldTransition ? "all 0.5s" : "",
+          transform: `translateX(${translate}px)`
+        }}>
         {edit.id ? (
           <TodoInput
           className="todo-input"

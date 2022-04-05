@@ -1,3 +1,15 @@
+@keyframes slidein {
+    from {
+      margin-left: 50%;
+      transform: rotate(360deg);
+    }
+  
+    to {
+      margin-left: 0%;
+      transform: rotate(0deg);
+    }
+  }
+
 .todo-item{
     height: 50px;
     min-width: 350px;
@@ -15,9 +27,9 @@
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.51);  
     text-overflow: ellipsis;
     padding: 0 10px;
+    animation-duration: 1.5s;
+    animation-name: slidein;
 }
-
-
 .container-todo{
     display: flex;
     flex-direction: column;
@@ -83,7 +95,6 @@
     min-height:auto;
     font-weight: 500;
 }
-
 .todo-input{
     height: 30px !important;
     width: 500px;
@@ -92,3 +103,4 @@
     border-radius: 6px;
     background-color :#fff;
 }
+
