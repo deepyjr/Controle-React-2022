@@ -5,7 +5,6 @@ import TodoList from "../../Components/TodoList/Todolist";
 function PageCss() {
   return (
     <div>
-      <h2>PageCss</h2>
       <TodoList />
     </div>
   );

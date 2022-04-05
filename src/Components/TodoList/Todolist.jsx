@@ -92,26 +92,30 @@ function TodoList() {
     <div className="todo-context">
       <h1>Voici les tâches que j'ai à faire aujourd'hui</h1>
       <TodoInput onSubmit={addTodo} />
-      {edit.id ? (
-        <TodoInput
-          edit={edit}
-          onSubmit={(value) => updateTodo(edit.id, value)}
-        />
-      ) : (
-        todos.map((todo, index) => (
-          <div key={index}>
-            <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-              {todo.text}
+      <div className="container-todo">
+        {edit.id ? (
+          <TodoInput
+          className="todo-input"
+            edit={edit}
+            onSubmit={(value) => updateTodo(edit.id, value)}
+          />
+        ) : (
+          todos.map((todo, index) => (
+            <div className="todo-item" key={index}>
+              <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+                {todo.text}
+              </div>
+              <div>
+                <button className="btn-delete" onClick={() => removeTodo(todo.id)}> Supprimer </button>
+                <button className="btn-edit"
+                  onClick={() => setEdit({ id: todo.id, value: todo.text })}
+                > Editer
+                  </button>
+              </div>
             </div>
-            <div>
-              <button onClick={() => removeTodo(todo.id)} />
-              <button
-                onClick={() => setEdit({ id: todo.id, value: todo.text })}
-              />
-            </div>
-          </div>
-        ))
-      )}
+          ))
+        )}
+      </div>
     </div>
   );
 }
