@@ -1,0 +1,106 @@
+@keyframes slidein {
+    from {
+      margin-left: 50%;
+      transform: rotate(360deg);
+    }
+  
+    to {
+      margin-left: 0%;
+      transform: rotate(0deg);
+    }
+  }
+
+.todo-item{
+    height: 50px;
+    min-width: 350px;
+    width: auto;
+    background-color: #161B22;
+    color: #fff;
+    border-radius:8px;
+    margin:15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #8B949E;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.51); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.51);  
+    text-overflow: ellipsis;
+    padding: 0 10px;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+.container-todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-delete{
+    background-color: #d6564c;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid #8B949E;
+    box-sizing: border-box;
+    font-family:  'Open Sans';
+    font-style: normal;
+    text-align: center;
+    margin: 15px 5px ;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    width:auto;
+    min-height:auto;
+    font-weight: 500;
+}
+.btn-delete:hover{
+    background-color:salmon ;
+}
+.btn-edit{
+    background-color: #8B949E;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid #8B949E;
+    box-sizing: border-box;
+    font-family:  'Open Sans';
+    font-style: normal;
+    text-align: center;
+    margin: 15px 5px ;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    width:auto;
+    min-height:auto;
+    font-weight: 500;
+}
+.btn-edit:hover{
+    background-color:grey ;
+}
+
+.todo-button{
+    background-color: #2EA043;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid #8B949E;
+    box-sizing: border-box;
+    font-family:  'Open Sans';
+    font-style: normal;
+    text-align: center;
+    margin: 15px 5px ;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    width:auto;
+    min-height:auto;
+    font-weight: 500;
+}
+.todo-input{
+    height: 30px !important;
+    width: 500px;
+    margin:  0 20px;
+    border: 1px solid #8B949E;
+    border-radius: 6px;
+    background-color :#fff;
+}
+
