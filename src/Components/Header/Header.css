@@ -15,18 +15,7 @@
    font-size: 15px !important;
    min-height: 40px !important;
 }
-.logo{
-height: 40px;
-}
-.Search{
-    height: 20px !important;
-    width: 200px;
-    color: white !important;
-    margin:  0 20px;
-    border: 1px solid #8B949E;
-    border-radius: 6px;
-    background-color :#0D1117;
-}
+
 ul{
     padding-left: 0;
     display: flex;
@@ -35,7 +24,15 @@ ul{
     font-weight: bold;
 }
 ul>li{
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
+ul>li>a, .titre {
+    text-decoration: none;
+    color: white !important;
+}
+
+ul>li>a:hover, .titre:hover {
+    color: #8B949E !important;
+}
 
