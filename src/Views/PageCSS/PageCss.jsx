@@ -1,10 +1,14 @@
-import React from 'react';
-import './PageCss.css';
+import React from "react";
+import "./PageCss.css";
+import TodoList from "../../Components/TodoList/Todolist";
 
 function PageCss() {
   return (
-    <h2>PageCss</h2>
-  )
+    <div>
+      <h2>PageCss</h2>
+      <TodoList />
+    </div>
+  );
 }
 
-export default PageCss
+export default PageCss;
