@@ -1,10 +1,12 @@
-import React from 'react'
-import './PageCssClass.css'
+import React from "react";
+import TodoList from "../../Components/TodoList/Todolist";
 
 function PageCssClass() {
   return (
-    <div>PageCssClass</div>
-  )
+    <div>
+      <TodoList />
+    </div>
+  );
 }
 
-export default PageCssClass
+export default PageCssClass;

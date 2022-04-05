@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import TodoInput from "./TodoInput";
+import styled, { keyframes } from "styled-components";
 
-function TodoList() {
+function TodoList(props) {
   //////////////////////////////////////////////////// VARIABLES //////////////////////////////////////////////////////
 
   const [todos, setTodos] = useState([]);
@@ -10,6 +11,18 @@ function TodoList() {
     id: null,
     value: "",
   });
+  const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+  const Bounce = styled.div`
+    animation: ${rotate} ${(time) => time.time}s linear infinite;
+  `;
 
   //////////////////////////////////////////////////// HOOKS //////////////////////////////////////////////////////
 
@@ -25,7 +38,6 @@ function TodoList() {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
-
 
   //////////////////////////////////////////////////// FUNCTIONS //////////////////////////////////////////////////////
 
@@ -87,36 +99,76 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
+  const genNumber = () => {
+    return Math.floor(Math.random() * 100) / 100;
+  };
+
   //////////////////////////////////////////////////// RENDER //////////////////////////////////////////////////////
   return (
-    <div className="todo-context">
-      <h1>Voici les tâches que j'ai à faire aujourd'hui</h1>
-      <TodoInput onSubmit={addTodo} />
-      <div className="container-todo">
-        {edit.id ? (
-          <TodoInput
-          className="todo-input"
-            edit={edit}
-            onSubmit={(value) => updateTodo(edit.id, value)}
-          />
-        ) : (
-          todos.map((todo, index) => (
-            <div className="todo-item" key={index}>
-              <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-                {todo.text}
-              </div>
-              <div>
-                <button className="btn-delete" onClick={() => removeTodo(todo.id)}> Supprimer </button>
-                <button className="btn-edit"
-                  onClick={() => setEdit({ id: todo.id, value: todo.text })}
-                > Editer
-                  </button>
-              </div>
-            </div>
-          ))
-        )}
+    <>
+      <div className="todo-context">
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {Array.from(Array(30).keys()).map((i) => {
+            return (
+              <Bounce time={genNumber().toString()}>
+                <p style={{ fontSize: "2em" }}>MY TODO LIST</p>
+              </Bounce>
+            );
+          })}
+        </div>
+        <div>
+          <h1>Voici les tâches que j'ai à faire aujourd'hui</h1>
+          <TodoInput onSubmit={addTodo} />
+          <div className="container-todo">
+            {edit.id ? (
+              <TodoInput
+                className="todo-input"
+                edit={edit}
+                onSubmit={(value) => updateTodo(edit.id, value)}
+              />
+            ) : (
+              todos.map((todo, index) => (
+                <div
+                  className={
+                    props.animation
+                      ? "todo-item" + " " + props.animation
+                      : "todo-item"
+                  }
+                  key={index}
+                >
+                  <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+                    {todo.text}
+                  </div>
+                  <div>
+                    <button
+                      className="btn-delete"
+                      onClick={() => removeTodo(todo.id)}
+                    >
+                      {" "}
+                      Supprimer{" "}
+                    </button>
+                    <button
+                      className="btn-edit"
+                      onClick={() => setEdit({ id: todo.id, value: todo.text })}
+                    >
+                      {" "}
+                      Editer
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {Array.from(Array(30).keys()).map((i) => (
+            <Bounce time={genNumber().toString()}>
+              <p style={{ fontSize: "2em" }}>MY TODO LIST</p>
+            </Bounce>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
