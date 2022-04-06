@@ -7,18 +7,15 @@ Ce projet a été realisé par les contributeurs suivants
 - Florian GILLET 
 
 ## Présentation du projet
-Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, modifier et supprimer). Quatres annimations via ces quatres méthodes différentes:
+Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, modifier et supprimer). Quatres animations via ces trois méthodes différentes:
 - CSS
 - Class CSS
 - librairie React
-- framework React
 
-## Présentation des différentes annimations
+## Présentation des différentes animations
 ### PageCSS
 ### PageCSSClass
 ### PageLibReact
-
-### PageFamework
 
 ## Fonctionnalités
 Quatre fonctionnalités ont été développées. Ces fonctonnalités permettent de créer, modifier et supprimer une tâche de la Todolist. Une autre fonctionnalité permet d'afficher toutes les tâches.
@@ -51,7 +48,7 @@ Pour supprimer une tâche, il suffit d'appuyer sur le bouton "delete".\
 Une fois la tâche supprimée, elle disparaîtra de la Todolist.\
 ->Mettre image ici
 
-## Technologies utilisée
+## Technologies utilisées
 ### React
 
 React est une bibliothèque JavaScript libre développée par Facebook depuis 2013. Le but principal de cette bibliothèque est de faciliter la création d'application web monopage, via la création de composants dépendant d'un état et générant une page HTML à chaque changement d'état.\
@@ -59,11 +56,10 @@ Version de React utilisée: 18.0.0
 Plus d'information: [Voir le site React js](https://fr.reactjs.org/)
 ### Spring React (c'est la lib)
 
-React-spring est une bibliotèque pour créer des annimations.\
+React-spring est une bibliotèque pour créer des animations.\
 Version de Spring React utilisée: 9.4.4
 Plus d'information: [Voir le site Spring React](https://react-spring.io/)
-### framework React
-?????
+
 
 ## Installation et lancement du projet
 ### Installation
