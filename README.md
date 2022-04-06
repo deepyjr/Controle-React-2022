@@ -53,12 +53,23 @@ Une fois la tâche supprimée, elle disparaîtra de la Todolist.\
 
 ## Technologies utilisée
 ### React
+
+React est une bibliothèque JavaScript libre développée par Facebook depuis 2013. Le but principal de cette bibliothèque est de faciliter la création d'application web monopage, via la création de composants dépendant d'un état et générant une page HTML à chaque changement d'état.\
+Version de React utilisée: 18.0.0
+Plus d'information: [Voir le site React js](https://fr.reactjs.org/)
 ### Spring React (c'est la lib)
+
+React-spring est une bibliotèque pour créer des annimations.\
+Version de Spring React utilisée: 9.4.4
+Plus d'information: [Voir le site Spring React](https://react-spring.io/)
 ### framework React
+?????
 
-## Initialisation et installation du projet
-### Instialisation
+## Installation et lancement du projet
 ### Installation
+Une fois le projet téléchargé, vous devez installer les différents modules. Nous allons utiliser le gestionnaire de modules "npm".\
+Executez la commande suivante:
+```
+npm update
+```
 ### Lancement
-
-## Les différentes annimations
