@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TodoInput from "./TodoInput";
 import styled, { keyframes } from "styled-components";
+import { useSpring, animated } from "react-spring";
 
 function TodoList(props) {
   //////////////////////////////////////////////////// VARIABLES //////////////////////////////////////////////////////
@@ -24,6 +25,14 @@ function TodoList(props) {
     animation: ${rotate} ${(time) => time.time}s linear infinite;
   `;
 
+  const styles = useSpring({
+    loop: true,
+    to: [
+      { opacity: 1, color: '#ffaaee' },
+      { opacity: 0, color: 'rgb(14,26,19)' },
+    ],
+    from: { opacity: 0, color: 'red' },
+  })
   //////////////////////////////////////////////////// HOOKS //////////////////////////////////////////////////////
 
   // Load data from localstorage into todoList
@@ -137,7 +146,7 @@ function TodoList(props) {
                   key={index}
                 >
                   <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-                    {todo.text}
+                    <animated.div style={styles}>{todo.text}</animated.div>
                   </div>
                   <div>
                     <button
