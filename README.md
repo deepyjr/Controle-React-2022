@@ -2,11 +2,12 @@
 
 ## Contributeurs
 Ce projet a été realisé par les contributeurs suivants 
-    - Raphaël DA FONSECA
-    - William HERBIN
-    - Florian GILLET
+- Raphaël DA FONSECA
+- William HERBIN
+- Florian GILLET
 
 ## Présentation du projet
+
 ### Page CSS
 ### Page CSS Class
 ### Page Lib react
