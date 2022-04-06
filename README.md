@@ -67,9 +67,12 @@ Plus d'information: [Voir le site Spring React](https://react-spring.io/)
 
 ## Installation et lancement du projet
 ### Installation
-Une fois le projet téléchargé, vous devez installer les différents modules. Nous allons utiliser le gestionnaire de modules "npm".\
-Executez la commande suivante:
+Dans le dossier du projet, vous devez executer le commande suivante afin d'installer les différents modules.
 ```
 npm update
 ```
 ### Lancement
+Pour lancer l'application, vous devez executer la commande suivantes:
+```
+npm start
+```
