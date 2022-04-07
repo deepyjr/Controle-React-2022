@@ -70,7 +70,7 @@ La fonctionnalité "modifier" permet de modifier une tâche.\
 <img src="imgDoc\edit1.PNG" alt="edit1"/>
 
 Pour modifier une tâche, il suffit d'appuyer sur le bouton "edit". Puis de remplir le champs et ensuite d'appuyer sur le bouton "update" .\
-<img src="imgDoc\edit2.PNG" alt="edit2"/>
+<img src="imgDoc\edit2.PNG" alt="edit2"/>\
 Une fois la tâche modifiée, elle apparaîtra dans la Todolist.\
 <img src="imgDoc\edit3.PNG" alt="edit3"/>
 
@@ -79,9 +79,9 @@ Une fois la tâche modifiée, elle apparaîtra dans la Todolist.\
 La fonctionnalité "supprimer" permet de su^pprimer une tâche à la Todolist.\
 
 Pour supprimer une tâche, il suffit d'appuyer sur le bouton "supprimer".\
-<img src="imgDoc\delete1.png" alt="delete1"/>
+<img src="imgDoc\delete1.png" alt="delete1"/>\
 Une fois la tâche supprimée, elle disparaîtra de la Todolist.\
-<img src="imgDoc\delete2.png" alt="delete2"/>
+<img src="imgDoc\delete2.PNG" alt="delete2"/>
 
 ## Technologies utilisées
 ### React
