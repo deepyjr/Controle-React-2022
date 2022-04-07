@@ -16,12 +16,17 @@ Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, mod
 ### PageCSS
 #### Animation
 <img src="imgDoc\g1.gif" alt="g1"/>
+
 #### Code
 ### PageCSSClass
 #### Animation
+<img src="imgDoc\g2.gif" alt="g2"/>
+
 #### Code
 ### PageLibReact
 #### Animation
+<img src="imgDoc\g3.gif" alt="g3"/>
+
 #### Code
 
 ## Fonctionnalités
