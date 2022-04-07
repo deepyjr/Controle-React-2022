@@ -15,8 +15,7 @@ Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, mod
 ## Présentation des différentes animations
 ### PageCSS
 #### Animation
-
-![a1](imgDoc\g1.gif)
+<img src="imgDoc\g1.gif" alt="g1"/>
 #### Code
 ### PageCSSClass
 #### Animation
