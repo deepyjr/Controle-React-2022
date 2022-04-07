@@ -25,7 +25,7 @@ La fonctionnalité "afficher" permet d'afficher l'ensemble des tâches à faire.
 
 ### Créer
 La fonctionnalité "créer" permet d'ajouter une tâche à la Todolist.\
-![Image créer](.\imgDoc\addTODO.PNG)
+![Image créer](imgDoc\addTODO.PNG)
 
 Pour ajouter une tâche, il suffit de remplir le champs et d'appuyer sur le bouton "Add todo".\
 Une fois la tâche ajoutée, elle apparaîtra au début de la Todolist.\
