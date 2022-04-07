@@ -29,6 +29,27 @@ Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, mod
 
 #### Code
 
+Pour créer cette animation, il faut commencer par importer deux éléments de react-spring.
+```
+import { useSpring, animated } from "react-spring";
+``` 
+
+Ensuite nous allons définir une configuration. Elle va nous permettre de déterminer la boucle et les deux couleurs. 'useSpring" est une ofnction qui permet d'animer des valeurs.
+``` 
+  const styles = useSpring({
+    loop: true,
+    to: [
+      { opacity: 1, color: '#ffaaee' },
+      { opacity: 0, color: 'rgb(14,26,19)' },
+    ],
+    from: { opacity: 0, color: 'red' },
+  })
+``` 
+
+Pour finir, nous créons une balise dit "animée" avec le style.
+```
+<animated.div style={styles}>{todo.text}</animated.div>
+```
 ## Fonctionnalités
 Quatre fonctionnalités ont été développées. Ces fonctonnalités permettent de créer, modifier et supprimer une tâche de la Todolist. Une autre fonctionnalité permet d'afficher toutes les tâches.
 ### Afficher
