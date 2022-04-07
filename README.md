@@ -29,22 +29,23 @@ La fonctionnalité "créer" permet d'ajouter une tâche à la Todolist.\
 
 Pour ajouter une tâche, il suffit de remplir le champs et d'appuyer sur le bouton "Add todo".\
 Une fois la tâche ajoutée, elle apparaîtra au début de la Todolist.\
-->Mettre image ici
+<img src="imgDoc\addTODO2.PNG" alt="img_creer2"/>
 
 ### Modifier
 La fonctionnalité "modifier" permet de modifier une tâche.\
-->Mettre image ici\
+<img src="imgDoc\edit1.PNG" alt="edit1"/>
 
 Pour modifier une tâche, il suffit d'appuyer sur le bouton "edit". Puis de remplir le champs et ensuite d'appuyer sur le bouton "update" .\
+<img src="imgDoc\edit2.PNG" alt="edit2"/>
 Une fois la tâche modifiée, elle apparaîtra dans la Todolist.\
-->Mettre image ici
+<img src="imgDoc\edit3.PNG" alt="edit3"/>
 
 ### Supprimer
 
 La fonctionnalité "supprimer" permet de su^pprimer une tâche à la Todolist.\
-->Mettre image ici\
+<img src="imgDoc\delete1.PNG" alt="delete1"/>
 
-Pour supprimer une tâche, il suffit d'appuyer sur le bouton "delete".\
+Pour supprimer une tâche, il suffit d'appuyer sur le bouton "supprimer".\
 Une fois la tâche supprimée, elle disparaîtra de la Todolist.\
 ->Mettre image ici
 
