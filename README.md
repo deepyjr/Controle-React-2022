@@ -14,14 +14,22 @@ Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, mod
 
 ## Présentation des différentes animations
 ### PageCSS
+#### Animation
+
+![a1](https://j.gifs.com/Z8gWWQ.gif)
+#### Code
 ### PageCSSClass
+#### Animation
+#### Code
 ### PageLibReact
+#### Animation
+#### Code
 
 ## Fonctionnalités
 Quatre fonctionnalités ont été développées. Ces fonctonnalités permettent de créer, modifier et supprimer une tâche de la Todolist. Une autre fonctionnalité permet d'afficher toutes les tâches.
 ### Afficher
 La fonctionnalité "afficher" permet d'afficher l'ensemble des tâches à faire.\
-->Mettre image ici
+<img src="imgDoc\affichage1.PNG" alt="affichage"/>
 
 ### Créer
 La fonctionnalité "créer" permet d'ajouter une tâche à la Todolist.\
@@ -43,11 +51,11 @@ Une fois la tâche modifiée, elle apparaîtra dans la Todolist.\
 ### Supprimer
 
 La fonctionnalité "supprimer" permet de su^pprimer une tâche à la Todolist.\
-<img src="imgDoc\delete1.png" alt="delete1"/>
 
 Pour supprimer une tâche, il suffit d'appuyer sur le bouton "supprimer".\
+<img src="imgDoc\delete1.png" alt="delete1"/>
 Une fois la tâche supprimée, elle disparaîtra de la Todolist.\
-->Mettre image ici
+<img src="imgDoc\delete2.png" alt="delete2"/>
 
 ## Technologies utilisées
 ### React
