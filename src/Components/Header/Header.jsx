@@ -20,11 +20,6 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/PageFrameWork">
-            <p>Page Framework CSS</p>
-          </Link>
-        </li>
-        <li>
           <Link to="/PageLibReact">
             <p>Page Library React</p>
           </Link>

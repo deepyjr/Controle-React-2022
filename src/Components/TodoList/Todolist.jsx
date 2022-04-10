@@ -4,35 +4,34 @@ import styled, { keyframes } from "styled-components";
 import { useSpring, animated } from "react-spring";
 
 function TodoList(props) {
+  
   //////////////////////////////////////////////////// VARIABLES //////////////////////////////////////////////////////
-
+  const [animation] = useState(props.animation);
   const [todos, setTodos] = useState([]);
   const LOCAL_STORAGE_KEY = "Estiam-Todolist";
   const [edit, setEdit] = useState({
     id: null,
     value: "",
   });
-  const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
 
-  to {
-    transform: rotate(360deg);
-  }
-`;
-  const Bounce = styled.div`
+  //////////////////////////////// ANIMATION NO CLASS //////////////////////////////////////////////
+  const rotate = keyframes`from { transform: rotate(0deg);}to {transform: rotate(360deg);}`; 
+  const InfiniteRoll = styled.div`
     animation: ${rotate} ${(time) => time.time}s linear infinite;
-  `;
+  `; 
+  //////////////////////////////////////////////////////////////////////////////////////////////////
 
+  /////////////////// ANIMATION LIBRARY ////////////////
   const styles = useSpring({
-    loop: true,
+    loop: true, 
     to: [
-      { opacity: 1, color: '#ffaaee' },
-      { opacity: 0, color: 'rgb(14,26,19)' },
-    ],
-    from: { opacity: 0, color: 'red' },
-  })
+      { opacity: 1, color: "#ffaaee" }, 
+      { opacity: 0, color: "rgb(14,26,19)" }, 
+    ], 
+    from: { opacity: 0, color: "red" }, 
+  }); 
+  //////////////////////////////////////////////////////
+
   //////////////////////////////////////////////////// HOOKS //////////////////////////////////////////////////////
 
   // Load data from localstorage into todoList
@@ -108,6 +107,10 @@ function TodoList(props) {
     setTodos(updatedTodos);
   };
 
+  /*
+   * Gen number function
+   * @ return Number
+   * */
   const genNumber = () => {
     return Math.floor(Math.random() * 100) / 100;
   };
@@ -117,14 +120,18 @@ function TodoList(props) {
     <>
       <div className="todo-context">
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {Array.from(Array(30).keys()).map((i) => {
-            return (
-              <Bounce time={genNumber().toString()}>
-                <p style={{ fontSize: "2em" }}>MY TODO LIST</p>
-              </Bounce>
-            );
-          })}
+          {/* ANIMATION NO CLASS */}
+          {animation === "no-class" &&
+            Array.from(Array(30).keys()).map(() => {
+              return (
+                <InfiniteRoll time={genNumber().toString()}>
+                  <p style={{ fontSize: "2em" }}>MY TODO LIST</p>
+                </InfiniteRoll>
+              );
+            })}
         </div>
+        {/* END ANIMATION NO CLASS */}
+
         <div>
           <h1>Voici les tâches que j'ai à faire aujourd'hui</h1>
           <TodoInput onSubmit={addTodo} />
@@ -137,17 +144,25 @@ function TodoList(props) {
               />
             ) : (
               todos.map((todo, index) => (
+                // ANIMATION CLASS
                 <div
                   className={
-                    props.animation
-                      ? "todo-item" + " " + props.animation
+                    props.animation === "class"
+                      ? "todo-item slide"
                       : "todo-item"
                   }
                   key={index}
+                  // END ANIMATION CLASS
                 >
+                  {/* ANIMATION LIBRARY */}
                   <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-                    <animated.div style={styles}>{todo.text}</animated.div>
+                    {props.animation === "library" ? (
+                      <animated.div style={styles}>{todo.text}</animated.div>
+                    ) : (
+                      todo.text
+                    )}
                   </div>
+                  {/* END ANIMATION LIBRARY */}
                   <div>
                     <button
                       className="btn-delete"
@@ -170,11 +185,14 @@ function TodoList(props) {
           </div>
         </div>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {Array.from(Array(30).keys()).map((i) => (
-            <Bounce time={genNumber().toString()}>
-              <p style={{ fontSize: "2em" }}>MY TODO LIST</p>
-            </Bounce>
-          ))}
+          {/* ANIMATION NO CLASS */}
+          {animation === "no-class" &&
+            Array.from(Array(30).keys()).map((i) => (
+              <InfiniteRoll time={genNumber().toString()}>
+                <p style={{ fontSize: "2em" }}>MY TODO LIST</p>
+              </InfiniteRoll>
+            ))}
+          {/* END ANIMATION NO CLASS */}
         </div>
       </div>
     </>

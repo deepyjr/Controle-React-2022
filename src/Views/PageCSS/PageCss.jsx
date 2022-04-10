@@ -4,7 +4,7 @@ import TodoList from "../../Components/TodoList/Todolist";
 function PageCss() {
   return (
     <div>
-      <TodoList animation={"slide"} />
+      <TodoList animation={"no-class"} />
     </div>
   );
 }
