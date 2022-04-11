@@ -26,6 +26,42 @@ Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, mod
 
 #### Code
 
+Définition du "keyFrame" de l'animation, c'est-à-dire, définir le début et la fin de l'animation. Dans notre cas, nous définissons une rotation de 360 degrés.
+
+```
+  const rotate = keyframes`from { transform: rotate(0deg);}to {transform: rotate(360deg);}`; 
+```
+
+Définition des attributs pour avoir une balise animée. Deux attributs sont nécéssaires, la rotation et vitesse de la rotation.
+
+```
+  const InfiniteRoll = styled.div`
+    animation: ${rotate} ${(time) => time.time}s linear infinite;
+  `; 
+```
+
+Pour obtenir différentes vitesses d'animations, nous générons un nombre aléatoire grace à cette fonction:
+
+```
+  const genNumber = () => {
+    return Math.floor(Math.random() * 100) / 100;
+  };
+```
+
+Pour mettre en place l'animation
+
+```
+ {/* ANIMATION NO CLASS */}
+          {animation === "no-class" &&
+            Array.from(Array(30).keys()).map(() => {
+              return (
+                <InfiniteRoll time={genNumber().toString()}>
+                  <p style={{ fontSize: "2em" }}>MY TODO LIST</p>
+                </InfiniteRoll>
+              );
+            })}
+```
+
 ### PageCSSClass
 
 #### Animation
