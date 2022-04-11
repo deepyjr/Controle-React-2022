@@ -75,6 +75,57 @@ Pour mettre en place l'animation
 
 #### Code
 
+Définition du 'keyFrame':
+```
+@keyframes slidein {
+    from {
+      margin-left: 50%;
+      transform: rotate(3600deg);
+    }
+  
+    to {
+      margin-left: 0%;
+      transform: rotate(0deg);
+    }
+  }
+```
+
+Définition d'une classe CSS contenant la durée de l'animation et le KeyFrame.
+```
+.slide {
+    animation-duration: 10s;
+    animation-name: slidein;
+}
+```
+
+Pour savoir si l'animation doit être déclenchée ou non, nous allons utiliser une condition ternière.
+```
+   <div
+     className={
+       props.animation === "class"
+         ? "todo-item slide"
+         : "todo-item"
+     }
+     key={index}
+     // END ANIMATION CLASS
+   >
+```
+
+Pour savoir, si l'animation doit être déclenchée, nous utilisons un props.\
+Pour récupérer le props:
+
+```
+  const [animation] = useState(props.animation);
+```
+
+Pour avoir l'animation, il ne reste plus qu'a définir une balise avec l'attribut 'animation={"class"}'.
+
+```
+  <div>
+    <TodoList animation={"class"}/>
+  </div>
+```
+
 ### PageLibReact
 
 #### Animation
