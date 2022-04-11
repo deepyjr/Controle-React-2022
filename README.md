@@ -26,6 +26,11 @@ Le but de ce projet est de réaliser une Todolist via un CRUD (créer, lire, mod
 
 #### Code
 
+Importation des modules nécésaires
+
+```
+import styled, { keyframes } from "styled-components";
+```
 Définition du "keyFrame" de l'animation, c'est-à-dire, définir le début et la fin de l'animation. Dans notre cas, nous définissons une rotation de 360 degrés.
 
 ```
