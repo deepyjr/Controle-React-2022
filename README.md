@@ -60,7 +60,7 @@ Une fois la tâche modifiée, elle apparaîtra dans la Todolist.\
 
 ### Supprimer
 
-La fonctionnalité "supprimer" permet de su^pprimer une tâche à la Todolist.\
+La fonctionnalité "supprimer" permet de su^pprimer une tâche à la Todolist.
 
 Pour supprimer une tâche, il suffit d'appuyer sur le bouton "supprimer".\
 <img src="imgDoc\delete1.png" alt="delete1"/>\
